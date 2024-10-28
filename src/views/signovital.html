@@ -99,30 +99,30 @@
                     <img src="../../assets/img/cuerpo.png" alt="" class="img-fluid mx-auto d-block">
                 </div>
                 <div class="col-12 col-md-5 text-white border-start">
-                    <h3>REGISTRA TU SIGNO VITAL</h3>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Fecha de la toma</label>
-                            <input type="date" class="form-control" id="">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Descripcion</label>
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id=""></textarea>
-                                <label for="floatingTextarea">Comentarios</label>
-                              </div>
-                        </div>
-                        <div class="mb-3">
-                            <select class="form-select" id="">
-                                <option selected>Selecciona un signo vital</option>
-                                <option value="1">Presión sanguinea</option>
-                                <option value="2">Temperatura</option>
-                                <option value="3">Saturación de oxigeno</option>
-                                <option value="4">Pulso Sanguineo</option>
-                              </select>
-                        </div>
-                        <button class="btn btn-primary">ENVIAR</button>
-                    </form>
+                  <h3>REGISTRA TU SIGNO VITAL</h3>
+                  <form>
+                      <div class="mb-3">
+                          <label class="form-label">Fecha de la toma</label>
+                          <input type="date" class="form-control" id="fechatoma">
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label">Descripcion</label>
+                          <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" id="descripcion"></textarea>
+                              <label for="floatingTextarea">Comentarios</label>
+                            </div>
+                      </div>
+                      <div class="mb-3">
+                          <select class="form-select" id="signovital">
+                              <option selected>Selecciona un signo vital</option>
+                              <option value="1">Presión sanguinea</option>
+                              <option value="2">Temperatura</option>
+                              <option value="3">Saturación de oxigeno</option>
+                              <option value="4">Pulso Sanguineo</option>
+                            </select>
+                      </div>
+                      <button class="btn btn-primary" id="botonregistrosignovital">ENVIAR</button>
+                  </form>
                 </div>
             </div>
         </section>
@@ -130,7 +130,8 @@
     <footer>
 
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../controllers/controladorsignovital.js"></script>
 </body>
 </html>
