@@ -1,44 +1,12 @@
-
-let signosVitales = [
-  {
-      id: 1,
-      tipo: "Presión arterial",
-      valor: "120/80",
-      unidad: "mmHg",
-      fecha: "2024-11-17",
-      paciente: "Juan Pérez"
-  },
-  {
-      id: 2,
-      tipo: "Frecuencia cardíaca",
-      valor: "72",
-      unidad: "bpm",
-      fecha: "2024-11-18",
-      paciente: "María López"
-  },
-  {
-      id: 3,
-      tipo: "Temperatura corporal",
-      valor: "37.5",
-      unidad: "°C",
-      fecha: "2024-11-19",
-      paciente: "Carlos Ruiz"
-  },
-  {
-      id: 4,
-      tipo: "Nivel de glucosa",
-      valor: "110",
-      unidad: "mg/dL",
-      fecha: "2024-11-20",
-      paciente: "Ana Gómez"
-  }
-];
-
-// Crear referencia a la fila donde se renderizarán las tarjetas
+import{buscarSignoVital} from "../services/serviciosSignovital.js"
+buscarSignoVital()
+.then(function(respuestaBack){
+  console.log(respuestaBack)
+  // Crear referencia a la fila donde se renderizarán las tarjetas
 let fila = document.getElementById("fila");
 
 // Recorrer el array de signos vitales y generar las tarjetas
-signosVitales.forEach(function(signo) {
+respuestaBack.forEach(function(signo) {
   // Crear columna
   let columna = document.createElement("div");
   columna.classList.add("col");
@@ -75,3 +43,5 @@ signosVitales.forEach(function(signo) {
   // Agregar columna a la fila
   fila.appendChild(columna);
 });
+
+})

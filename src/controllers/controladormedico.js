@@ -1,3 +1,5 @@
+import{buscarMedicos} from "../services/serviciosmedico.js"
+
 // let nombreMedico = document.getElementById("nombremedico")
 // let matriculaProfesional = document.getElementById("matriculamedico")
 // let especialidad = document.getElementById("especialidadmedico")
@@ -37,46 +39,16 @@
 //       });
 // })
 
-let medicos = [
-  {
-      id: 1,
-      nombre: "Dr. Juan Pérez",
-      especialidad: "Cardiología",
-      telefono: "3001234567",
-      correo: "juan.perez@gmail.com",
-      hospital: "Hospital San Ignacio"
-  },
-  {
-      id: 2,
-      nombre: "Dra. María López",
-      especialidad: "Pediatría",
-      telefono: "3007654321",
-      correo: "maria.lopez@gmail.com",
-      hospital: "Hospital Santa Clara"
-  },
-  {
-      id: 3,
-      nombre: "Dr. Carlos Ruiz",
-      especialidad: "Dermatología",
-      telefono: "3108765432",
-      correo: "carlos.ruiz@gmail.com",
-      hospital: "Clínica del Valle"
-  },
-  {
-      id: 4,
-      nombre: "Dra. Ana Gómez",
-      especialidad: "Neurología",
-      telefono: "3112345678",
-      correo: "ana.gomez@gmail.com",
-      hospital: "Clínica del Caribe"
-  }
-];
 
+
+buscarMedicos()
+.then(function(respuestaBack){
+  console.log(respuestaBack)
 // Crear referencia a la fila donde se renderizarán las tarjetas
 let filaMedicos = document.getElementById("fila");
 
 // Recorrer el array de médicos y generar las tarjetas
-medicos.forEach(function(medico) {
+respuestaBack.forEach(function(medico) {
   let columna = document.createElement("div");
   columna.classList.add("col");
 
@@ -106,3 +78,6 @@ medicos.forEach(function(medico) {
   columna.appendChild(tarjeta);
   filaMedicos.appendChild(columna);
 });
+})
+
+

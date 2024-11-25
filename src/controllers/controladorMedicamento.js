@@ -1,44 +1,14 @@
+import{buscarMedicamento} from "../services/serviciosmedicamento.js"
 
-let medicamentos = [
-    {
-        id: 1,
-        nombre: "Paracetamol",
-        dosis: "500mg",
-        viaAdministracion: "Oral",
-        frecuencia: "Cada 8 horas",
-        indicaciones: "Alivio de fiebre y dolor leve."
-    },
-    {
-        id: 2,
-        nombre: "Ibuprofeno",
-        dosis: "200mg",
-        viaAdministracion: "Oral",
-        frecuencia: "Cada 6 horas",
-        indicaciones: "Alivio de dolor y antiinflamatorio."
-    },
-    {
-        id: 3,
-        nombre: "Amoxicilina",
-        dosis: "500mg",
-        viaAdministracion: "Oral",
-        frecuencia: "Cada 12 horas",
-        indicaciones: "Tratamiento de infecciones bacterianas."
-    },
-    {
-        id: 4,
-        nombre: "Loratadina",
-        dosis: "10mg",
-        viaAdministracion: "Oral",
-        frecuencia: "Una vez al día",
-        indicaciones: "Tratamiento de alergias."
-    }
-];
 
-// Crear referencia a la fila donde se renderizarán las tarjetas
+buscarMedicamento()
+.then(function(respuestaBack){
+    console.log(respuestaBack)
+    // Crear referencia a la fila donde se renderizarán las tarjetas
 let filaMedicamentos = document.getElementById("fila");
 
 // Recorrer el array de medicamentos y generar las tarjetas
-medicamentos.forEach(function(medicamento) {
+respuestaBack.forEach(function(medicamento) {
     let columna = document.createElement("div");
     columna.classList.add("col");
 
@@ -68,3 +38,6 @@ medicamentos.forEach(function(medicamento) {
     columna.appendChild(tarjeta);
     filaMedicamentos.appendChild(columna);
 });
+
+})
+
