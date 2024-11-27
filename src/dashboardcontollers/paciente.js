@@ -1,5 +1,4 @@
-//OBJETIVO: Capturar los datos de un formulario
-
+import{registrarPaciente} from "../services/serviciospaciente.js"
 //1. por cada input, select, textarea del formulario 
 //se crea un variable
 
@@ -11,7 +10,7 @@ let correoPaciente=document.getElementById("correopaciente")
 let telefonoPaciente=document.getElementById("telefonopaciente")
 let fechaNacimientoPaciente=document.getElementById("nacimientopaciente")
 let ciudadPaciente=document.getElementById("ciudadpaciente")
-let polizaPaciente=document.getElementById("ingresospaciente")
+let polizaPaciente=document.getElementById("polizapaciente")
 let ipsPaciente=document.getElementById("ipspaciente")
 let grupoIngresoPaciente=document.getElementById("ingresospaciente")
 let fechaAfiliacionPaciente=document.getElementById("afiliacionpaciente")
@@ -26,22 +25,28 @@ botonRegistroPaciente.addEventListener("click", function(evento){
     //5. se crea un json que capture todos los datos del formulario
     let  datosPaciente = {
         nombre: nombrePaciente.value,
+        anioNacimiento: fechaNacimientoPaciente.value,
+        ciudad: ciudadPaciente.value,
         correo: correoPaciente.value,
         telefono:  telefonoPaciente.value,
-        fechaNacimiento: fechaNacimientoPaciente.value,
-        ciudad: ciudadPaciente.value,
-        poliza:  polizaPaciente.value,
         ips: ipsPaciente.value,
-        grupoIngreso: grupoIngresoPaciente.value,
+        poliza: polizaPaciente.value = true,
+        grupoIngresos: grupoIngresoPaciente.value,
         fechaAfiliacion: fechaAfiliacionPaciente.value
     }
     
     console.log(datosPaciente)
-
-    Swal.fire({
+    registrarPaciente(datosPaciente)
+    .then((respuestaBack)=>{
+        console.log(respuestaBack)
+        Swal.fire({
         title: "Ahora haces parte de sura :D",
         text: "Registro exitoso!",
         icon: "success"
       });
+    })
+
+    
       
 })  
+

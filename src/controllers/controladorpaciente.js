@@ -1,5 +1,4 @@
-import{buscarPacientes} from "../services/serviciospaciente.js"
-
+ import{buscarPacientes} from "../services/serviciospaciente.js"
 //OBJETIVO: Recibir datos del back y hacerles render 
 //1. llamar al api
 buscarPacientes()

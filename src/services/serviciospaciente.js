@@ -16,3 +16,14 @@ export async  function buscarPacientes() {
        return pacientes
 }
 
+export async function registrarPaciente(datosPaciente) {
+    const url = "http://localhost8080/api/paciente"
+    let peticion = {
+        method : "POST",
+        headers : {"Content-Type":"application/json"},
+        body : JSON.stringify(datosPaciente)
+    }
+    let respuestaInicial = await fetch(url,peticion)
+    let respuestaFinal = await respuestaInicial.json()
+    return respuestaFinal
+}
