@@ -1,3 +1,4 @@
+import{registrarSignoVital} from "../services/serviciosSignovital.js"
 let FechaDeToma = document.getElementById("fechatoma")
 let descripcionSigno = document.getElementById("descripcion")
 let seleccionaSigno = document.getElementById("signovital")
@@ -14,12 +15,16 @@ botonRegistroSignoVital.addEventListener("click",function(evento){
     }
     console.log(datosSignoVital)
 
-
-    Swal.fire({
+    registrarSignoVital(datosSignoVital)
+    .then((respuestaBack)=>{
+      console.log(respuestaBack)
+      Swal.fire({
         title: "Ahora haces parte de sura :D",
         text: "Registro exitoso!",
         icon: "success"
       });
+    })
+    
 
 
 })
