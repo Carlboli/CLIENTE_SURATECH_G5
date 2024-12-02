@@ -30,7 +30,7 @@ botonRegistroPaciente.addEventListener("click", function(evento){
         correo: correoPaciente.value,
         telefono:  telefonoPaciente.value,
         ips: ipsPaciente.value,
-        poliza: polizaPaciente.value = true,
+        poliza: polizaPaciente = true,
         grupoIngresos: grupoIngresoPaciente.value,
         fechaAfiliacion: fechaAfiliacionPaciente.value
     }

@@ -22,8 +22,20 @@ let fila = document.getElementById("fila")
     let nombre = document.createElement("h2")
     nombre.textContent=paciente.nombre
 
+    let anioNacimiento = document.createElement("p")
+    anioNacimiento.textContent=`Año Nacimiento: ${paciente.anioNacimiento}`
+
+    let ciudad = document.createElement("p")
+    ciudad.textContent = `Ciudad: ${paciente.ciudad}`
+
+    let correo = document.createElement("p")
+    correo.textContent = `Correo: ${paciente.correo}`
+
     //PASO FINAL ordenando las cartas
     tarjeta.appendChild(nombre)
+    tarjeta.appendChild(anioNacimiento)
+    tarjeta.appendChild(correo)
+    tarjeta.appendChild(ciudad)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 })
