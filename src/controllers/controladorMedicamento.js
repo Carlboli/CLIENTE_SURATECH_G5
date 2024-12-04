@@ -18,23 +18,23 @@ respuestaBack.forEach(function(medicamento) {
     let nombre = document.createElement("h2");
     nombre.textContent = medicamento.nombre;
 
+    let presentacion = document.createElement("p");
+    presentacion.textContent = `presentacion: ${medicamento.presentacion}`;
+
     let dosis = document.createElement("p");
-    dosis.textContent = `Dosis: ${medicamento.dosis}`;
+    dosis.textContent = `dosis: ${medicamento.dosis}`;
 
-    let viaAdministracion = document.createElement("p");
-    viaAdministracion.textContent = `Vía de administración: ${medicamento.viaAdministracion}`;
+    let fechaCaducidad = document.createElement("p");
+    fechaCaducidad.textContent = `fecha de caducidad: ${medicamento.fechaCaducidad}`;
 
-    let frecuencia = document.createElement("p");
-    frecuencia.textContent = `Frecuencia: ${medicamento.frecuencia}`;
-
-    let indicaciones = document.createElement("p");
-    indicaciones.textContent = `Indicaciones: ${medicamento.indicaciones}`;
+    let contraIndicaciones = document.createElement("p");
+    contraIndicaciones.textContent = `Indicaciones: ${medicamento.contraIndicaciones}`;
 
     tarjeta.appendChild(nombre);
+    tarjeta.appendChild(presentacion);
     tarjeta.appendChild(dosis);
-    tarjeta.appendChild(viaAdministracion);
-    tarjeta.appendChild(frecuencia);
-    tarjeta.appendChild(indicaciones);
+    tarjeta.appendChild(fechaCaducidad);
+    tarjeta.appendChild(contraIndicaciones);
     columna.appendChild(tarjeta);
     filaMedicamentos.appendChild(columna);
 });

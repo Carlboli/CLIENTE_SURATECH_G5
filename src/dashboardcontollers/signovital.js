@@ -9,9 +9,9 @@ botonRegistroSignoVital.addEventListener("click",function(evento){
     evento.preventDefault()
 
     let datosSignoVital = {
-    fechaDeToma: FechaDeToma.value,
-    descripcion: descripcionSigno.value,
-    signoVital: seleccionaSigno.value
+      nombre: seleccionaSigno.value,
+      valor: descripcionSigno.value,
+      fechaMedida: FechaDeToma.value
     }
     console.log(datosSignoVital)
 

@@ -16,32 +16,31 @@ respuestaBack.forEach(function(signo) {
   tarjeta.classList.add("card", "p-5", "h-100", "shadow");
 
   // Título: Tipo de signo vital
-  let tipo = document.createElement("h2");
-  tipo.textContent = signo.tipo;
+  let nombre = document.createElement("h2");
+  nombre.textContent = `Signo Vital: ${signo.nombre}`;
 
   // Detalle: Valor y unidad
-  let detalle = document.createElement("p");
-  detalle.textContent = `Valor: ${signo.valor} ${signo.unidad}`;
+  let valor = document.createElement("p");
+  valor.textContent = `paciente: ${signo.valor} `;
 
   // Fecha
-  let fecha = document.createElement("p");
-  fecha.textContent = `Fecha: ${signo.fecha}`;
+  let fechaMedida = document.createElement("p");
+  fechaMedida.textContent = `Fecha: ${signo.fechaMedida}`;
 
-  // Paciente asociado
-  let paciente = document.createElement("p");
-  paciente.textContent = `Paciente: ${signo.paciente}`;
 
+ 
   // Agregar elementos a la tarjeta
-  tarjeta.appendChild(tipo);
-  tarjeta.appendChild(detalle);
-  tarjeta.appendChild(fecha);
-  tarjeta.appendChild(paciente);
+  tarjeta.appendChild(nombre);
+  tarjeta.appendChild(valor);
+  tarjeta.appendChild(fechaMedida);
+
 
   // Agregar tarjeta a la columna
-  columna.appendChild(tarjeta);
-
-  // Agregar columna a la fila
+  
+ columna.appendChild(tarjeta);
   fila.appendChild(columna);
+  // Agregar columna a la fila
+  
 });
 
 })

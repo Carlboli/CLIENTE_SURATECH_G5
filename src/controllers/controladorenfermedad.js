@@ -45,16 +45,16 @@ respuestaBack.forEach(function(enfermedad) {
   let sintomas = document.createElement("p");
   sintomas.textContent = `Síntomas: ${enfermedad.sintomas}`;
 
-  let tratamiento = document.createElement("p");
-  tratamiento.textContent = `Tratamiento: ${enfermedad.tratamiento}`;
+  let clasificacion = document.createElement("p");
+  clasificacion.textContent = `Tratamiento: ${enfermedad. clasificacion}`;
 
-  let duracion = document.createElement("p");
-  duracion.textContent = `Duración: ${enfermedad.duracion}`;
+  let grado = document.createElement("p");
+  grado.textContent = `Duración: ${enfermedad.grado}`;
 
   tarjeta.appendChild(nombre);
   tarjeta.appendChild(sintomas);
-  tarjeta.appendChild(tratamiento);
-  tarjeta.appendChild(duracion);
+  tarjeta.appendChild(clasificacion);
+  tarjeta.appendChild(grado);
   columna.appendChild(tarjeta);
   filaEnfermedades.appendChild(columna);
 });

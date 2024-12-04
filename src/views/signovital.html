@@ -101,26 +101,26 @@
                 <div class="col-12 col-md-5 text-white border-start">
                   <h3>REGISTRA TU SIGNO VITAL</h3>
                   <form>
-                      <div class="mb-3">
-                          <label class="form-label">Fecha de la toma</label>
-                          <input type="date" class="form-control" id="fechatoma">
+                    <div class="mb-3">
+                        <select class="form-select" id="signovital">
+                            <option selected>Selecciona un signo vital</option>
+                            <option>Presión sanguinea</option>
+                            <option>Temperatura</option>
+                            <option>Saturación de oxigeno</option>
+                            <option>Pulso Sanguineo</option>
+                          </select>
+                        </div>
+                    <div class="mb-3">
+                      <label class="form-label">Descripcion</label>
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="descripcion"></textarea>
+                        <label for="floatingTextarea">Comentarios</label>
                       </div>
-                      <div class="mb-3">
-                          <label class="form-label">Descripcion</label>
-                          <div class="form-floating">
-                              <textarea class="form-control" placeholder="Leave a comment here" id="descripcion"></textarea>
-                              <label for="floatingTextarea">Comentarios</label>
-                            </div>
                       </div>
-                      <div class="mb-3">
-                          <select class="form-select" id="signovital">
-                              <option selected>Selecciona un signo vital</option>
-                              <option value="1">Presión sanguinea</option>
-                              <option value="2">Temperatura</option>
-                              <option value="3">Saturación de oxigeno</option>
-                              <option value="4">Pulso Sanguineo</option>
-                            </select>
-                      </div>
+                          <div class="mb-3">
+                              <label class="form-label">Fecha de la toma</label>
+                              <input type="date" class="form-control" id="fechatoma">
+                          </div>
                       <button class="btn btn-primary" id="botonregistrosignovital">ENVIAR</button>
                   </form>
                 </div>

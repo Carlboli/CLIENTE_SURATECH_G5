@@ -67,14 +67,12 @@ respuestaBack.forEach(function(medico) {
   let correo = document.createElement("p");
   correo.textContent = `Correo: ${medico.correo}`;
 
-  let hospital = document.createElement("p");
-  hospital.textContent = `Hospital: ${medico.hospital}`;
+  
 
   tarjeta.appendChild(nombre);
   tarjeta.appendChild(especialidad);
   tarjeta.appendChild(telefono);
   tarjeta.appendChild(correo);
-  tarjeta.appendChild(hospital);
   columna.appendChild(tarjeta);
   filaMedicos.appendChild(columna);
 });
